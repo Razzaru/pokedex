@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+.normal {
+  color: burlywood;
+}
+
+.fire {
+  color: orangered;
+}
+
+.fighting {
+  color: darkred;
+}
+
+.water {
+  color: deepskyblue;
+}
+
+.flying {
+  color: mediumpurple;
+}
+
+.grass {
+  color: green;
+}
+
+.poison {
+  color: purple;
+}
+
+.electric {
+  color: #e6e600;
+}
+
+.ground {
+  color: sandybrown;
+}
+
+.psychic {
+  color: deeppink;
+}
+
+.rock {
+  color: saddlebrown;
+}
+
+.ice {
+  color: lightblue;
+}
+
+.bug {
+  color: olivedrab;
+}
+
+.dragon {
+  color: #0000cc;
+}
+
+.ghost {
+  color: rebeccapurple;
+}
+
+.dark {
+  color: black;
+}
+
+.steel {
+  color: grey;
+}
+
+.fairy {
+  color: hotpink;
+}

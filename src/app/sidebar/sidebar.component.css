@@ -17,7 +17,10 @@ body {
 }
 
 #sidebar-wrapper {
- margin-top: 10px;
+  z-index: 1000;
+  position: fixed;
+  height: 100%;
+  margin-top: 10px;
   overflow-y: auto;
   background: #fff;
   -webkit-transition: all 0.5s ease;

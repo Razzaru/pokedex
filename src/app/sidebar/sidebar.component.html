@@ -6,20 +6,20 @@
       </a>
     </li>
     <div class="input-group" style="margin-bottom: 10px; ">
-      <input type="text" class="form-control" placeholder="Enter pokemon name..." [(ngModel)]="pokemonId" (keypress.enter)="updateId()" aria-describedby="basic-addon2">
+      <input type="text" class="form-control" placeholder="Enter pokemon name or id..." [(ngModel)]="pokemonId" (keypress.enter)="updateId()" aria-describedby="basic-addon2">
       <span class="input-group-addon" id="basic-addon2" style="width: auto; cursor: pointer" (click)="updateId()"><span class="fa fa-search"></span></span>
     </div>
     <li>
-      <a routerLink="/">Pokemon List</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Pokemon List</a>
     </li>
     <li class="dropdown">
       <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-         aria-haspopup="true" aria-expanded="true">
+         aria-haspopup="true" aria-expanded="true" routerLinkActive="active">
         Generations
         <span class="caret"></span>
       </a>
       <ul class="dropdown-menu">
-        <li *ngFor="let gen of generations"><a routerLink="/generations/{{(gen.url).slice(-2, -1)}}">{{gen.name | capitalize}}</a></li>
+        <li *ngFor="let gen of generations"><a routerLink="/generations/{{(gen.url).slice(-2, -1)}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{gen.name | capitalize}}</a></li>
       </ul>
   </ul>
 </div>

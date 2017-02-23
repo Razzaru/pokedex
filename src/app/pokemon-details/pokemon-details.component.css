@@ -3,3 +3,14 @@
   background-image: none;
 }
 
+.well {
+  background-color: white;
+  background-image: none;
+}
+
+.thumbnail {
+  position: relative;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+
