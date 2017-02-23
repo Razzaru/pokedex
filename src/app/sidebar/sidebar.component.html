@@ -1,0 +1,25 @@
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <li class="sidebar-brand">
+      <a routerLink="/">
+        Pokedex SPA
+      </a>
+    </li>
+    <div class="input-group" style="margin-bottom: 10px; ">
+      <input type="text" class="form-control" placeholder="Enter pokemon name..." [(ngModel)]="pokemonId" (change)="updateId()" aria-describedby="basic-addon2">
+      <span class="input-group-addon" id="basic-addon2" style="width: auto"><span class="fa fa-search"></span></span>
+    </div>
+    <li>
+      <a routerLink="/">Pokemon List</a>
+    </li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+         aria-haspopup="true" aria-expanded="true">
+        Generations
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li *ngFor="let gen of generations"><a routerLink="/generations/{{(gen.url).slice(-2, -1)}}">{{gen.name | capitalize}}</a></li>
+      </ul>
+  </ul>
+</div>

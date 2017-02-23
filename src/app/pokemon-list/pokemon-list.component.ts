@@ -6,7 +6,7 @@ import {PokedexService} from "../services/pokedex.service";
   templateUrl: './pokemon-list.component.html',
   styleUrls: ['./pokemon-list.component.css']
 })
-export class PokemonListComponent implements OnInit {
+export class PokemonListComponent {
 
   offset:number = 0;
   pokemonList;
@@ -21,9 +21,6 @@ export class PokemonListComponent implements OnInit {
       this.nextPage = pokemons.next;
       this.addSprites();
     });
-  }
-
-  ngOnInit() {
   }
 
   nextPageNav() {

@@ -1,6 +1,6 @@
 <div class="panel panel-default" *ngFor="let pokemon of pokemonList">
   <div class="panel-heading">
-    <a href="/pokemon/{{pokemon.id}}"><h4 class="panel-title text-center">{{pokemon.name | capitalize}}</h4></a>
+    <a href="/pokemon/{{pokemon.name}}"><h4 class="panel-title text-center">{{pokemon.name | capitalize}}</h4></a>
     <p class="text-center"><span *ngFor="let type of pokemon.types" class="{{type.type.name}}">{{type.type.name | capitalize}} </span></p>
   </div>
     <div class="panel-body">

@@ -8,18 +8,26 @@ import {PokedexService} from "./services/pokedex.service";
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
 import { CapitalizePipe } from './capitalize.pipe';
+import {routing} from "./app.routing";
+import { GenerationComponent } from './generation/generation.component';
+import { GenerationsListComponent } from './generations-list/generations-list.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonListComponent,
     PokemonDetailsComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    GenerationComponent,
+    GenerationsListComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [PokedexService],
   bootstrap: [AppComponent]

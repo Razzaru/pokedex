@@ -15,12 +15,20 @@ export class PokedexService {
     return this._http.get(url).map(res => res.json());
   }
 
-  getByGen(generation: number) {
+  getSingleGen(generation: number) {
     return this._http.get('http://pokeapi.co/api/v2/generation/'+generation).map(res => res.json());
   }
 
   getBerryById(id: number) {
     return this._http.get('http://pokeapi.co/api/v2/berry/'+id).map(res => res.json());
+  }
+
+  getGens() {
+    return this._http.get('http://pokeapi.co/api/v2/generation/').map(res => res.json());
+  }
+  
+  getPokemonById(id: number) {
+    return this._http.get('http://pokeapi.co/api/v2/pokemon/'+id).map(res => res.json());
   }
 
 }
