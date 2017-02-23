@@ -1,3 +1,29 @@
-<p>
-  pokemon-details works!
-</p>
+<div class="panel panel-default" *ngIf="activePokemon">
+  <div class="panel-heading">
+    <span class="panel-title">{{activePokemon.name | capitalize}}</span>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-2">
+        <img src="{{activePokemon.sprites.front_default}}" alt="{{activePokemon.name}}" class="img-thumbnail">
+      </div>
+      <div class="col-lg-10">
+        <span class="label label-default">Height: {{activePokemon.height}}</span>
+        <span class="label label-default">Weight: {{activePokemon.weight}}</span>
+        <br>
+        <h4 class="page-header">Base stats:</h4>
+        <span class="label label-default">Experience: {{activePokemon.base_experience}}</span>
+        <span class="label label-primary">{{activePokemon.stats[0].stat.name | capitalize}}: {{activePokemon.stats[0].base_stat}}</span>
+        <span class="label label-warning">{{activePokemon.stats[1].stat.name | capitalize}}: {{activePokemon.stats[1].base_stat}}</span>
+        <span class="label label-info">{{activePokemon.stats[2].stat.name | capitalize}}: {{activePokemon.stats[2].base_stat}}</span>
+        <span class="label label-success">{{activePokemon.stats[3].stat.name | capitalize}}: {{activePokemon.stats[3].base_stat}}</span>
+        <span class="label label-default">{{activePokemon.stats[4].stat.name | capitalize}}: {{activePokemon.stats[4].base_stat}}</span>
+        <span class="label label-danger">{{activePokemon.stats[5].stat.name | capitalize}}: {{activePokemon.stats[5].base_stat}}</span>
+        <h4 class="page-header">Abilities:</h4>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let ability of activePokemon.abilities"><a routerLink="/abilities/{{ability.ability.name}}">{{ability.ability.name | capitalize}} <span class="badge pull-right" *ngIf="ability.is_hidden">Hidden</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

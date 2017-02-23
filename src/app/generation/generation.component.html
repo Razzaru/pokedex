@@ -1,3 +1,4 @@
+<div *ngIf="generation">
 <div class="panel panel-default" *ngFor="let pokemon of generation['pokemon_species']">
   <div class="panel-heading">
     <a href="/pokemon/{{pokemon.name }}"><h4 class="panel-title text-center">{{pokemon.name | capitalize }}</h4></a>
@@ -7,4 +8,4 @@
     <!--<img class="card-img-top" src="{{pokemon.spriteUrl}}" alt="{{pokemon.name}}" class="center-block">-->
   </div>
 </div>
-
+</div>

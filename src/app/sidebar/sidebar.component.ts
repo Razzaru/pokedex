@@ -20,7 +20,7 @@ export class SidebarComponent {
   }
 
   updateId() {
-    this._router.navigate(['/pokemon/'+this.pokemonId])
+    this._router.navigate(['/pokemon/'+this.pokemonId.toLowerCase()])
   }
 
 }

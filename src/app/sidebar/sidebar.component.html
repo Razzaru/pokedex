@@ -6,8 +6,8 @@
       </a>
     </li>
     <div class="input-group" style="margin-bottom: 10px; ">
-      <input type="text" class="form-control" placeholder="Enter pokemon name..." [(ngModel)]="pokemonId" (change)="updateId()" aria-describedby="basic-addon2">
-      <span class="input-group-addon" id="basic-addon2" style="width: auto"><span class="fa fa-search"></span></span>
+      <input type="text" class="form-control" placeholder="Enter pokemon name..." [(ngModel)]="pokemonId" (keypress.enter)="updateId()" aria-describedby="basic-addon2">
+      <span class="input-group-addon" id="basic-addon2" style="width: auto; cursor: pointer" (click)="updateId()"><span class="fa fa-search"></span></span>
     </div>
     <li>
       <a routerLink="/">Pokemon List</a>
