@@ -13,7 +13,7 @@ export class PokemonListComponent {
   pokemonList;
   count:number;
   nextPage:string;
-  currentPage:string = 'http://pokeapi.co/api/v2/pokemon/?offset=0';
+  currentPage:string = 'https://pokeapi.co/api/v2/pokemon/?offset=0';
   pokemonId: string = '';
 
   constructor(private _pokedexService:PokedexService, private _router: Router) {

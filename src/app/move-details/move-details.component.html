@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="stats">
-            <span class="label {{activeMove.damage_class.name}}">{{activeMove.damage_class.name | capitalize}}</span>
+            <span class="label {{activeMove.damage_class.name}}">{{activeMove?.damage_class?.name | capitalize}}</span>
             <span class="label label-success">PP: {{activeMove.pp}}</span>
             <span class="label label-danger">Power: {{activeMove.power}}</span>
             <span class="label label-warning">Accuracy: {{activeMove.accuracy}}</span>
@@ -40,4 +40,4 @@
       </div>
     </div>
   </div>
--->
+

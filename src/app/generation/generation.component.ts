@@ -35,4 +35,11 @@ export class GenerationComponent implements OnChanges {
     return tmp;
   }
 
+  updateMoveId() {
+    var tmp = (this.generation.moves).filter((item) => {
+      return item.name.includes(this.pokemonId.toLowerCase());
+    });
+    return tmp;
+  }
+
 }

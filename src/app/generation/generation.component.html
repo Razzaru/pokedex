@@ -1,10 +1,19 @@
 <div *ngIf="generation">
-  <div class="form-group" style="margin-bottom: 10px; ">
-    <input type="text" class="form-control" placeholder="Enter pokemon name..." [(ngModel)]="pokemonId"
-           (change)="updateId()" aria-describedby="basic-addon2">
+  <div class="page-header">
+    <h2>{{generation.name | capitalize }} <small class="pull-right">Region: {{generation.main_region.name | capitalize}}</small></h2>
   </div>
+  <div class="form-group" style="margin-bottom: 10px; ">
+    <input type="text" class="form-control" placeholder="Enter pokemon or move name..." [(ngModel)]="pokemonId"
+           (change)="updateId(); updateMoveId()" aria-describedby="basic-addon2">
+  </div>
+  <h4 class="page-header">Pokemon:</h4>
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let pokemon of updateId()"><a
       routerLink="/pokemon/{{pokemon.name}}">{{pokemon.name | capitalize}}</a></li>
+  </ul>
+  <h4 class="page-header">Moves:</h4>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let move of updateMoveId()"><a
+      routerLink="/moves/{{move.name}}">{{move.name | capitalize}}</a></li>
   </ul>
 </div>

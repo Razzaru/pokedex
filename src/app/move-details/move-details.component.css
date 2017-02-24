@@ -28,11 +28,15 @@ a:hover {
 }
 
 .physical {
-  background-color: #d9534f;
+  background-color: firebrick;
 }
 
 .special {
   background-color: #337ab7;
+}
+
+.status {
+  background-color: darkorchid;
 }
 
 .normal {

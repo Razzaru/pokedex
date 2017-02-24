@@ -10,7 +10,7 @@ export class AbilitiesListComponent implements OnInit {
 
   offset: number = 0;
   abilities;
-  currentPage:string = 'http://pokeapi.co/api/v2/ability/?offset=0';
+  currentPage:string = 'https://pokeapi.co/api/v2/ability/?offset=0';
   nextPage: string;
   abilityId: string = '';
 

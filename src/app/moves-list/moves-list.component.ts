@@ -10,7 +10,7 @@ export class MovesListComponent implements OnInit {
 
   offset: number = 0;
   moves;
-  currentPage:string = 'http://pokeapi.co/api/v2/move/?offset=0';
+  currentPage:string = 'https://pokeapi.co/api/v2/move/?offset=0';
   nextPage: string;
   moveId: string = '';
 
