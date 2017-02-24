@@ -5,10 +5,6 @@
         Pokedex SPA
       </a>
     </li>
-    <div class="input-group" style="margin-bottom: 10px; ">
-      <input type="text" class="form-control" placeholder="Enter pokemon name or id..." [(ngModel)]="pokemonId" (keypress.enter)="updateId()" aria-describedby="basic-addon2">
-      <span class="input-group-addon" id="basic-addon2" style="width: auto; cursor: pointer" (click)="updateId()"><span class="fa fa-search"></span></span>
-    </div>
     <li>
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Pokemon List</a>
     </li>

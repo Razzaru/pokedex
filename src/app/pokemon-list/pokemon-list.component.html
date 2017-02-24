@@ -1,11 +1,17 @@
-<div class="panel panel-default" *ngFor="let pokemon of pokemonList">
-  <div class="panel-heading">
-    <a href="/pokemon/{{pokemon.name}}"><h4 class="panel-title text-center">{{pokemon.name | capitalize}}</h4></a>
-    <p class="text-center"><span *ngFor="let type of pokemon.types" class="{{type.type.name}}">{{type.type.name | capitalize}} </span></p>
+<div *ngIf="pokemonList">
+  <div class="form-group" style="margin-bottom: 10px; ">
+    <input type="text" class="form-control" placeholder="Enter pokemon name or id..." [(ngModel)]="pokemonId"
+           (change)="updateId()" aria-describedby="basic-addon2">
   </div>
-    <div class="panel-body">
-      <img class="card-img-top" src="{{pokemon.spriteUrl}}" alt="{{pokemon.name}}" class="center-block">
-    </div>
+
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let pokemon of updateId()"><a routerLink="/pokemon/{{pokemon.name}}">{{pokemon.name
+      | capitalize}}</a></li>
+  </ul>
+  <button type="button" class="btn btn-default" style="width: 49%; background-image: none;" (click)="prevPageNav()">
+    Previous page
+  </button>
+  <button type="button" class="btn btn-default" style="width: 50%; background-image: none;" (click)="nextPageNav()">Next
+    Page
+  </button>
 </div>
-<button type="button" class="btn btn-default" style="width: 46.7%; background-image: none;" (click)="prevPageNav()">Previous page</button>
-<button type="button" class="btn btn-default" style="width: 46.7%; background-image: none;" (click)="nextPageNav()">Next Page</button>

@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PokedexService} from "../services/pokedex.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-pokemon-list',
@@ -13,13 +14,13 @@ export class PokemonListComponent {
   count:number;
   nextPage:string;
   currentPage:string = 'http://pokeapi.co/api/v2/pokemon/?offset=0';
+  pokemonId: string = '';
 
-  constructor(private _pokedexService:PokedexService) {
+  constructor(private _pokedexService:PokedexService, private _router: Router) {
     this._pokedexService.getByUrl(this.currentPage).subscribe(pokemons => {
       this.pokemonList = pokemons.results;
       this.count = pokemons.count;
-      this.nextPage = pokemons.next;
-      this.addSprites();
+      this.nextPage = pokemons.next
     });
   }
 
@@ -28,7 +29,6 @@ export class PokemonListComponent {
       this.pokemonList = pokemons.results;
       this.currentPage = this.nextPage;
       this.nextPage = pokemons.next;
-      this.addSprites();
     });
     if ((this.currentPage).length >= 43) {
       this.offset += 20;
@@ -39,19 +39,15 @@ export class PokemonListComponent {
     this._pokedexService.getTwentyPokemon(this.offset).subscribe(pokemons => {
       this.pokemonList = pokemons.results;
       this.nextPage = pokemons.next;
-      this.addSprites();
     });
     this.offset -= 20;
   }
 
-  addSprites() {
-    this.pokemonList.forEach((item, index, array) => {
-      this._pokedexService.getByUrl(item.url).subscribe(pokemon => {
-        item.spriteUrl = pokemon.sprites.front_default;
-        item.types = pokemon.types;
-        item.id = pokemon.id;
-      });
+  updateId() {
+    var tmp = this.pokemonList.filter((item) => {
+      return item.name.includes(this.pokemonId.toLowerCase());
     });
+    return tmp;
   }
 
 }
