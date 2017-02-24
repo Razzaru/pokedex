@@ -12,6 +12,8 @@ import {routing} from "./app.routing";
 import { GenerationComponent } from './generation/generation.component';
 import { GenerationsListComponent } from './generations-list/generations-list.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { TypesListComponent } from './types-list/types-list.component';
+import { TypeDetailsComponent } from './type-details/type-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     CapitalizePipe,
     GenerationComponent,
     GenerationsListComponent,
-    SidebarComponent
+    SidebarComponent,
+    TypesListComponent,
+    TypeDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,14 @@
   margin-bottom: 10px;
 }
 
+.page-header {
+  margin: 0px 0px 20px;
+}
+
+.from {
+  margin-bottom: 10px;
+}
+
 a {
   color: black;
 }

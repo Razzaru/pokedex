@@ -7,11 +7,11 @@
   </div>
   <div class="panel panel-default">
     <div class="panel-heading">
-    <span class="panel-title">#{{activePokemon.id}} {{activePokemon.name | capitalize}} <span>&#8226;</span><span
+    <span class="panel-title">#{{activePokemon.id}} {{activePokemon.name | capitalize}} <span>&#8226;</span><a
       style="cursor: pointer"
       *ngFor="let type of activePokemon.types"
       class="{{type.type.name}}"
-      routerLink="/types/{{type.type.name}}"> {{type.type.name | capitalize }} </span></span>
+      routerLink="/types/{{type.type.name}}"> {{type.type.name | capitalize }} </a></span>
     </div>
     <div class="panel-body">
       <div class="row">

@@ -1,0 +1,4 @@
+<div *ngIf="types">
+  <h3 class="page-header">Types list:</h3>
+  <a *ngFor="let type of types" routerLink="/types/{{type.name}}"><div style="padding: 10px" class="panel panel-default {{type.name}}"><span>{{type.name | capitalize}}</span></div></a>
+</div>

@@ -26,9 +26,17 @@ export class PokedexService {
   getGens() {
     return this._http.get('http://pokeapi.co/api/v2/generation/').map(res => res.json());
   }
-  
+
   getPokemonById(id: number) {
     return this._http.get('http://pokeapi.co/api/v2/pokemon/'+id).map(res => res.json());
+  }
+
+  getTypes() {
+    return this._http.get('http://pokeapi.co/api/v2/type').map(res => res.json());
+  }
+  
+  getTypeById(id) {
+    return this._http.get('http://pokeapi.co/api/v2/type/'+id).map(res => res.json());
   }
 
 }

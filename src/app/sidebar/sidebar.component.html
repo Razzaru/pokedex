@@ -1,12 +1,15 @@
 <div id="sidebar-wrapper">
   <ul class="sidebar-nav">
     <li class="sidebar-brand">
-      <a routerLink="/">
+      <a routerLink="/pokemon">
         Pokedex SPA
       </a>
     </li>
     <li>
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Pokemon List</a>
+      <a routerLink="/pokemon" routerLinkActive="active">Pokemon List</a>
+    </li>
+    <li>
+      <a routerLinkActive="active" routerLink="/types">Types</a>
     </li>
     <li class="dropdown">
       <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
