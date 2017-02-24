@@ -1,10 +1,17 @@
-<div *ngIf="activePokemon">
+<div *ngIf="activePokemon" style="margin-bottom: 50px">
+  <div class="navigation">
+    <a routerLink="/pokemon/{{(activePokemon.id)-1}}" class="btn btn-default"
+       style="width: 49.5%; background-image: none">← Prev</a>
+    <a routerLink="/pokemon/{{(activePokemon.id)+1}}" class="btn btn-default pull-right"
+       style="width: 49.5%; background-image: none">Next →</a>
+  </div>
   <div class="panel panel-default">
     <div class="panel-heading">
-    <span class="panel-title">#{{activePokemon.id}} {{activePokemon.name | capitalize}} <span>&#8226;</span><span style="cursor: pointer"
-                                                                                            *ngFor="let type of activePokemon.types"
-                                                                                            class="{{type.type.name}}"
-                                                                                            routerLink="/types/{{type.type.name}}"> {{type.type.name | capitalize }} </span></span>
+    <span class="panel-title">#{{activePokemon.id}} {{activePokemon.name | capitalize}} <span>&#8226;</span><span
+      style="cursor: pointer"
+      *ngFor="let type of activePokemon.types"
+      class="{{type.type.name}}"
+      routerLink="/types/{{type.type.name}}"> {{type.type.name | capitalize }} </span></span>
     </div>
     <div class="panel-body">
       <div class="row">
