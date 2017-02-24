@@ -47,4 +47,12 @@ export class PokedexService {
     return this._http.get('http://pokeapi.co/api/v2/ability/'+id).map(res => res.json());
   }
 
+  getMoves(offset) {
+    return this._http.get('http://pokeapi.co/api/v2/move/?offset='+offset).map(res => res.json());
+  }
+
+  getMoveById(id) {
+    return this._http.get('http://pokeapi.co/api/v2/move/'+id).map(res => res.json());
+  }
+
 }

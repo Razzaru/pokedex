@@ -9,6 +9,8 @@ import {TypesListComponent} from "./types-list/types-list.component";
 import {TypeDetailsComponent} from "./type-details/type-details.component";
 import {AbilitiesListComponent} from "./abilities-list/abilities-list.component";
 import {AbilityDetailsComponent} from "./ability-details/ability-details.component";
+import {MovesListComponent} from "./moves-list/moves-list.component";
+import {MoveDetailsComponent} from "./move-details/move-details.component";
 
 const appRoutes: Routes = [
   {
@@ -42,6 +44,14 @@ const appRoutes: Routes = [
   {
     path: 'abilities/:id',
     component: AbilityDetailsComponent
+  },
+  {
+    path: 'moves',
+    component: MovesListComponent
+  },
+  {
+    path: 'moves/:id',
+    component: MoveDetailsComponent
   },
   {
     path: '',

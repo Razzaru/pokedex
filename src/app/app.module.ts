@@ -17,6 +17,8 @@ import { TypeDetailsComponent } from './type-details/type-details.component';
 import { AbilitiesListComponent } from './abilities-list/abilities-list.component';
 import { AbilityDetailsComponent } from './ability-details/ability-details.component';
 import { LoadingComponent } from './loading/loading.component';
+import { MovesListComponent } from './moves-list/moves-list.component';
+import { MoveDetailsComponent } from './move-details/move-details.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { LoadingComponent } from './loading/loading.component';
     TypeDetailsComponent,
     AbilitiesListComponent,
     AbilityDetailsComponent,
-    LoadingComponent
+    LoadingComponent,
+    MovesListComponent,
+    MoveDetailsComponent
   ],
   imports: [
     BrowserModule,
