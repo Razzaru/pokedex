@@ -7,6 +7,8 @@ import { GenerationComponent } from "./generation/generation.component";
 import {GenerationsListComponent} from "./generations-list/generations-list.component";
 import {TypesListComponent} from "./types-list/types-list.component";
 import {TypeDetailsComponent} from "./type-details/type-details.component";
+import {AbilitiesListComponent} from "./abilities-list/abilities-list.component";
+import {AbilityDetailsComponent} from "./ability-details/ability-details.component";
 
 const appRoutes: Routes = [
   {
@@ -32,6 +34,14 @@ const appRoutes: Routes = [
   {
     path: 'types/:id',
     component: TypeDetailsComponent
+  },
+  {
+    path: 'abilities',
+    component: AbilitiesListComponent
+  },
+  {
+    path: 'abilities/:id',
+    component: AbilityDetailsComponent
   },
   {
     path: '',

@@ -14,6 +14,9 @@ import { GenerationsListComponent } from './generations-list/generations-list.co
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TypesListComponent } from './types-list/types-list.component';
 import { TypeDetailsComponent } from './type-details/type-details.component';
+import { AbilitiesListComponent } from './abilities-list/abilities-list.component';
+import { AbilityDetailsComponent } from './ability-details/ability-details.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { TypeDetailsComponent } from './type-details/type-details.component';
     GenerationsListComponent,
     SidebarComponent,
     TypesListComponent,
-    TypeDetailsComponent
+    TypeDetailsComponent,
+    AbilitiesListComponent,
+    AbilityDetailsComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

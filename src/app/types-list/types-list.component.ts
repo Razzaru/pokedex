@@ -9,14 +9,11 @@ import {PokedexService} from "../services/pokedex.service";
 export class TypesListComponent implements OnInit {
 
   types;
-  count;
 
   constructor(private _pokedexService: PokedexService) {
     this._pokedexService.getTypes().subscribe(types => {
       this.types = types.results;
-      this.count = types.count;
       console.log(this.types);
-      console.log(this.count);
     });
   }
 

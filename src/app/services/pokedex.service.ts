@@ -34,9 +34,17 @@ export class PokedexService {
   getTypes() {
     return this._http.get('http://pokeapi.co/api/v2/type').map(res => res.json());
   }
-  
+
   getTypeById(id) {
     return this._http.get('http://pokeapi.co/api/v2/type/'+id).map(res => res.json());
+  }
+
+  getAbilities(offset) {
+    return this._http.get('http://pokeapi.co/api/v2/ability/?offset='+offset).map(res => res.json());
+  }
+
+  getAbilityById(id) {
+    return this._http.get('http://pokeapi.co/api/v2/ability/'+id).map(res => res.json());
   }
 
 }

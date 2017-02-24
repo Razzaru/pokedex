@@ -1,11 +1,11 @@
-<div *ngIf="pokemonList">
+<div *ngIf="abilities">
   <div class="form-group" style="margin-bottom: 10px; ">
-    <input type="text" class="form-control" placeholder="Enter pokemon name..." [(ngModel)]="pokemonId"
+    <input type="text" class="form-control" placeholder="Enter ability name..." [(ngModel)]="abilityId"
            (change)="updateId()" aria-describedby="basic-addon2">
   </div>
 
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let pokemon of updateId()"><a routerLink="/pokemon/{{pokemon.name}}">{{pokemon.name
+    <li class="list-group-item" *ngFor="let ability of updateId()"><a routerLink="/abilities/{{ability.name}}">{{ability.name
       | capitalize}}</a></li>
   </ul>
   <button type="button" class="btn btn-default" style="width: 49%; background-image: none;" (click)="prevPageNav()">

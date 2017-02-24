@@ -1,0 +1,42 @@
+<div *ngIf="activeAbility" style="margin-bottom: 50px">
+  <div class="navigation">
+    <a routerLink="/abilities/{{(activeAbility.id)-1}}" class="btn btn-default"
+       style="width: 49.5%; background-image: none">← Prev</a>
+    <a routerLink="/abilities/{{(activeAbility.id)+1}}" class="btn btn-default pull-right"
+       style="width: 49.5%; background-image: none">Next →</a>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span class="panel-title">#{{activeAbility.id}} {{activeAbility.name | capitalize}} <span
+        class="label label-danger pull-right">Generation: {{activeAbility.generation.name | capitalize}}</span><span
+        class="label label-info pull-right" style="margin-right: 3px;" *ngIf="activeAbility.is_main_series">From main series</span></span>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="alert alert-success" *ngFor="let effect of activeAbility.effect_entries"><strong>Effect: </strong>
+            {{effect.effect}} (<i>{{effect?.short_effect}}</i>)
+          </div>
+
+          <h4 class="page-header">Flavor text entries: </h4>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let text of activeAbility.flavor_text_entries"
+                style="border: 1px solid grey">
+              <p><span>{{text.flavor_text}}</span></p>
+              <ul class="list-group">
+                <li class="list-group-item"><b>Language: </b>{{text.language.name}}</li>
+                <li class="list-group-item"><b>Version: </b>{{text.version_group.name | capitalize}}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h4 class="page-header">Pokemon: </h4>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let pokemon of activeAbility.pokemon">
+      <a routerLink="/pokemon/{{pokemon.pokemon.name}}">{{pokemon.pokemon.name | capitalize }}</a>
+    </li>
+  </ul>
+</div>
