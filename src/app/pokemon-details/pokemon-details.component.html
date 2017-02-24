@@ -16,7 +16,8 @@
     <div class="panel-body">
       <div class="row">
         <div class="col-lg-2">
-          <img src="{{activePokemon.sprites.front_default}}" alt="{{activePokemon.name}}" class="img-thumbnail">
+          <img src="{{activePokemon.sprites.front_default}}" alt="{{activePokemon.name}}" class="img-thumbnail" *ngIf="activePokemon.sprites.front_default">
+          <img src="http://www.nderf.org/images/page_404.jpg" alt="404" class="img-thumbnail" *ngIf="!activePokemon.sprites.front_default">
         </div>
         <div class="col-lg-10">
           <span class="label label-default">Height: {{activePokemon.height}}</span>
