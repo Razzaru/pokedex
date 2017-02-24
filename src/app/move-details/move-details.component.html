@@ -17,8 +17,8 @@
           <div class="stats">
             <span class="label {{activeMove.damage_class.name}}">{{activeMove?.damage_class?.name | capitalize}}</span>
             <span class="label label-success">PP: {{activeMove.pp}}</span>
-            <span class="label label-danger">Power: {{activeMove.power}}</span>
-            <span class="label label-warning">Accuracy: {{activeMove.accuracy}}</span>
+            <span class="label label-danger" *ngIf="activeMove.power">Power: {{activeMove.power}}</span>
+            <span class="label label-warning" *ngIf="activeMove.accuracy">Accuracy: {{activeMove.accuracy}}</span>
             <span class="label label-default">Prority: {{activeMove.priority}}</span>
             <span class="label label-info">Target: {{activeMove.target.name | capitalize}}</span>
           </div>

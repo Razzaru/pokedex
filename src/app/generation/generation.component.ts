@@ -29,14 +29,14 @@ export class GenerationComponent implements OnChanges {
   }
 
   updateId() {
-    var tmp = (this.generation.pokemon_species).filter((item) => {
+    let tmp = (this.generation.pokemon_species).filter((item) => {
       return item.name.includes(this.pokemonId.toLowerCase());
     });
     return tmp;
   }
 
   updateMoveId() {
-    var tmp = (this.generation.moves).filter((item) => {
+    let tmp = (this.generation.moves).filter((item) => {
       return item.name.includes(this.pokemonId.toLowerCase());
     });
     return tmp;
