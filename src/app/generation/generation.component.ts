@@ -10,6 +10,7 @@ import {PokedexService} from "../services/pokedex.service";
 export class GenerationComponent implements OnChanges {
 
   generation;
+  pokemonId = '';
 
   constructor(private _pokedexService: PokedexService, private _route: ActivatedRoute) {
     this._route.params
@@ -25,6 +26,13 @@ export class GenerationComponent implements OnChanges {
 
   ngOnChanges() {
 
+  }
+
+  updateId() {
+    var tmp = (this.generation.pokemon_species).filter((item) => {
+      return item.name.includes(this.pokemonId.toLowerCase());
+    });
+    return tmp;
   }
 
 }

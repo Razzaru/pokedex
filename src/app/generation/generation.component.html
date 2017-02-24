@@ -1,5 +1,10 @@
 <div *ngIf="generation">
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let pokemon of generation.pokemon_species"><a routerLink="/pokemon/{{pokemon.name}}">{{pokemon.name | capitalize}}</a></li>
-</ul>
+  <div class="form-group" style="margin-bottom: 10px; ">
+    <input type="text" class="form-control" placeholder="Enter pokemon name or id..." [(ngModel)]="pokemonId"
+           (change)="updateId()" aria-describedby="basic-addon2">
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let pokemon of updateId()"><a
+      routerLink="/pokemon/{{pokemon.name}}">{{pokemon.name | capitalize}}</a></li>
+  </ul>
 </div>

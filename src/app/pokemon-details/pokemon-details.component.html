@@ -1,7 +1,7 @@
 <div *ngIf="activePokemon">
   <div class="panel panel-default">
     <div class="panel-heading">
-    <span class="panel-title">{{activePokemon.name | capitalize}} <span>&#8226;</span><span style="cursor: pointer"
+    <span class="panel-title">#{{activePokemon.id}} {{activePokemon.name | capitalize}} <span>&#8226;</span><span style="cursor: pointer"
                                                                                             *ngFor="let type of activePokemon.types"
                                                                                             class="{{type.type.name}}"
                                                                                             routerLink="/types/{{type.type.name}}"> {{type.type.name | capitalize }} </span></span>
