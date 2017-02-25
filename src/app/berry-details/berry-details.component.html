@@ -1,0 +1,60 @@
+<div *ngIf="activeBerry" style="margin-bottom: 50px">
+  <div class="navigation">
+    <a routerLink="/berries/{{(activeBerry.id)-1}}" class="btn btn-default"
+       style="width: 49.5%; background-image: none">← Prev</a>
+    <a routerLink="/berries/{{(activeBerry.id)+1}}" class="btn btn-default pull-right"
+       style="width: 49.5%; background-image: none">Next →</a>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span class="panel-title">#{{activeBerry.id}} {{activeBerry.name | capitalize}}</span>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="stats">
+            <span class="label label-success">Max harvest: {{activeBerry.max_harvest}}</span>
+            <span class="label label-warning">Soil dryness: {{activeBerry.soil_dryness}}</span>
+            <span class="label label-default">Smoothness: {{activeBerry.smoothness}}</span>
+            <span class="label label-danger">Growth time: {{activeBerry.growth_time}}</span>
+            <span class="label label-primary">Size: {{activeBerry.size}}</span>
+            <span class="label label-info">Firmness: {{activeBerry.firmness.name | capitalize}}</span>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body"><b>Item: </b><a routerLink="/items/{{activeBerry.item.name}}">{{activeBerry.item.name
+              | capitalize}}</a></div>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item"><b>Natural gift details</b></li>
+            <li class="list-group-item">Natural gift type: <a class="{{activeBerry.natural_gift_type.name}}"
+                                                              routerLink="/types/{{activeBerry.natural_gift_type.name}}">{{activeBerry.natural_gift_type.name
+              | capitalize}}</a></li>
+            <li class="list-group-item">Natural gift power: {{activeBerry.natural_gift_power}}</li>
+          </ul>
+
+          <ul class="list-group">
+            <li class="list-group-item"><b>Flavors:</b></li>
+            <li class="list-group-item" *ngFor="let flavor of activeBerry.flavors">
+              <b>Flavor name:</b> {{flavor.flavor.name | capitalize}}<span class="pull-right"><b>Potency:</b> {{flavor.potency}}</span>
+            </li>
+          </ul>
+          <!--
+          <div class="alert alert-success" *ngFor="let effect of activeMove.effect_entries" style="margin-top: 20px"><strong>Effect: </strong>
+            {{(effect.effect).replace('$effect_chance', activeMove.effect_chance)}} (<i>{{(effect?.short_effect).replace('$effect_chance', activeMove.effect_chance)}}</i>)
+          </div>
+          <h4 class="page-header">Flavor text entries: </h4>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let text of activeMove.flavor_text_entries"
+                style="border: 1px solid grey">
+              <p><span>{{text.flavor_text}}</span></p>
+              <ul class="list-group">
+                <li class="list-group-item"><b>Language: </b>{{text.language.name}}</li>
+                <li class="list-group-item"><b>Version: </b>{{text.version_group.name | capitalize}}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+-->

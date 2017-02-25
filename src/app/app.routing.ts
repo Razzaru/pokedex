@@ -14,6 +14,8 @@ import {MoveDetailsComponent} from "./move-details/move-details.component";
 import {ItemsListComponent} from "./items-list/items-list.component";
 import {ItemDetailsComponent} from "./item-details/item-details.component";
 import {EncountersComponent} from "./encounters/encounters.component";
+import {BerriesListComponent} from "./berries-list/berries-list.component";
+import {BerryDetailsComponent} from "./berry-details/berry-details.component";
 
 const appRoutes: Routes = [
   {
@@ -67,6 +69,14 @@ const appRoutes: Routes = [
   {
     path: 'items/:id',
     component: ItemDetailsComponent
+  },
+  {
+    path: 'berries',
+    component: BerriesListComponent
+  },
+  {
+    path: 'berries/:id',
+    component: BerryDetailsComponent
   },
   {
     path: '',

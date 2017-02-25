@@ -19,7 +19,11 @@ export class PokedexService {
     return this._http.get('https://pokeapi.co/api/v2/generation/'+generation).map(res => res.json());
   }
 
-  getBerryById(id: number) {
+  getBerries(offset) {
+    return this._http.get('https://pokeapi.co/api/v2/berry/?offset='+offset).map(res => res.json());
+  }
+  
+  getBerryById(id) {
     return this._http.get('https://pokeapi.co/api/v2/berry/'+id).map(res => res.json());
   }
 
@@ -27,7 +31,7 @@ export class PokedexService {
     return this._http.get('https://pokeapi.co/api/v2/generation/').map(res => res.json());
   }
 
-  getPokemonById(id: number) {
+  getPokemonById(id) {
     return this._http.get('https://pokeapi.co/api/v2/pokemon/'+id).map(res => res.json());
   }
 

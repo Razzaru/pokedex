@@ -1,11 +1,11 @@
-<div *ngIf="items">
+<div *ngIf="berries">
   <div class="form-group" style="margin-bottom: 10px; ">
-    <input type="text" class="form-control" placeholder="Enter item name..." [(ngModel)]="itemId"
+    <input type="text" class="form-control" placeholder="Enter berry name..." [(ngModel)]="berryId"
            (change)="updateId()" aria-describedby="basic-addon2">
   </div>
 
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let item of updateId()"><a routerLink="/items/{{item.name}}">{{item.name
+    <li class="list-group-item" *ngFor="let berry of updateId()"><a routerLink="/berries/{{berry.name}}">{{berry.name
       | capitalize}}</a></li>
   </ul>
   <button type="button" class="btn btn-default" style="width: 49%; background-image: none;" (click)="prevPageNav()">
