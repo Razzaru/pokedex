@@ -1,4 +1,10 @@
 <div *ngIf="types">
-  <h3 class="page-header">Types list:</h3>
-  <a *ngFor="let type of types" routerLink="/types/{{type.name}}"><div style="padding: 10px" class="panel panel-default {{type.name}}"><span>{{type.name | capitalize}}</span></div></a>
+  <div class="form-group" style="margin-bottom: 10px; ">
+    <input type="text" class="form-control" placeholder="Enter type name..." [(ngModel)]="typeId"
+           (change)="updateId()" aria-describedby="basic-addon2">
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item {{type.name}}" style="border: 1px solid grey" *ngFor="let type of updateId()"><a routerLink="/types/{{type.name}}">{{type.name
+      | capitalize}}</a></li>
+  </ul>
 </div>
