@@ -54,6 +54,10 @@ export class PokedexService {
   getItemById(id) {
     return this._http.get('https://pokeapi.co/api/v2/item/'+id).map(res => res.json());
   }
+  
+  getEncounterById(id) {
+    return this._http.get('https://pokeapi.co/api/v2/pokemon/'+id+'/encounters').map(res => res.json());
+  }
 
   getMoves(offset) {
     return this._http.get('https://pokeapi.co/api/v2/move/?offset='+offset).map(res => res.json());

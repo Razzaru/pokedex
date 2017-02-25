@@ -21,6 +21,7 @@ import { MovesListComponent } from './moves-list/moves-list.component';
 import { MoveDetailsComponent } from './move-details/move-details.component';
 import { ItemsListComponent } from './items-list/items-list.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { EncountersComponent } from './encounters/encounters.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
     MovesListComponent,
     MoveDetailsComponent,
     ItemsListComponent,
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    EncountersComponent
   ],
   imports: [
     BrowserModule,

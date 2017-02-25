@@ -1,0 +1,35 @@
+<div *ngIf="activeEnc">
+  <a routerLink="../" class="btn btn-default btn-block" style="margin-bottom: 10px;">← Go back</a>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="alert alert-danger" *ngIf="activeEnc.length == 0">
+        <i>No encounter information about this pokemon! Sorry!</i>
+      </div>
+      <ul class="list-group" *ngIf="activeEnc.length > 0">
+        <li class="list-group-item" *ngFor="let enc of activeEnc">
+          <div class="alert alert-success">
+            <p>{{enc.location_area.name | capitalize}}</p>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item" style="border: 1px solid grey" *ngFor="let vd of enc.version_details">
+              <h4 class="page-header" style="margin-top: 0px;">Version:
+                <small>{{vd.version.name | capitalize}}</small>
+                <span class="pull-right">Max chance: <small>{{vd.max_chance}}</small></span></h4>
+              <ul class="list-group" style="margin-top: 10px;">
+                <li class="list-group-item" style="border: 0.5px solid grey"><b>Encounter details:</b></li>
+                <li class="list-group-item" *ngFor="let ed of vd.encounter_details" style="border: 1px solid grey">
+                  <ul class="list-group">
+                    <li class="list-group-item"><b>Min level:</b> {{ed.min_level}}</li>
+                    <li class="list-group-item"><b>Max level:</b> {{ed.max_level}}</li>
+                    <li class="list-group-item"><b>Chance:</b> {{ed.chance}}</li>
+                    <li class="list-group-item"><b>Method:</b> {{ed.method.name | capitalize}}</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

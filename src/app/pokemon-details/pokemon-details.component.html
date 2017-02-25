@@ -18,6 +18,7 @@
         <div class="col-lg-2">
           <img src="{{activePokemon.sprites.front_default}}" alt="{{activePokemon.name}}" class="img-thumbnail" *ngIf="activePokemon.sprites.front_default">
           <img src="http://www.nderf.org/images/page_404.jpg" alt="404" class="img-thumbnail" *ngIf="!activePokemon.sprites.front_default">
+          <a class="btn btn-default" style="width: 106px; margin-top: 5px; background-image: none; background-color: white;" routerLink="/pokemon/{{activePokemon.id}}/encounters">Encounters</a>
         </div>
         <div class="col-lg-10">
           <span class="label label-default">Height: {{activePokemon.height}}</span>
