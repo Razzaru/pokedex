@@ -32,5 +32,6 @@
       <ul class="dropdown-menu">
         <li *ngFor="let gen of generations"><a routerLink="/generations/{{(gen.url).slice(-2, -1)}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{gen.name | capitalize}}</a></li>
       </ul>
+    </li>
   </ul>
 </div>

@@ -3,26 +3,26 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { MovesListComponent } from './moves-list.component';
+import { NavCollapseComponent } from './nav-collapse.component';
 
-describe('MovesListComponent', () => {
-  let component: MovesListComponent;
-  let fixture: ComponentFixture<MovesListComponent>;
+describe('NavCollapseComponent', () => {
+  let component: NavCollapseComponent;
+  let fixture: ComponentFixture<NavCollapseComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MovesListComponent ]
+      declarations: [ NavCollapseComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MovesListComponent);
+    fixture = TestBed.createComponent(NavCollapseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(true).toBe(true);
+    expect(component).toBeTruthy();
   });
 });

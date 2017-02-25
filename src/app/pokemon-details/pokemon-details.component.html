@@ -15,16 +15,16 @@
     </div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-lg-2">
-          <img src="{{activePokemon.sprites.front_default}}" alt="{{activePokemon.name}}" class="img-thumbnail" *ngIf="activePokemon.sprites.front_default">
-          <img src="http://www.nderf.org/images/page_404.jpg" alt="404" class="img-thumbnail" *ngIf="!activePokemon.sprites.front_default">
-          <a class="btn btn-default" style="width: 106px; margin-top: 5px; background-image: none; background-color: white;" routerLink="/pokemon/{{activePokemon.id}}/encounters">Encounters</a>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+          <img src="{{activePokemon.sprites.front_default}}" alt="{{activePokemon.name}}" class="img-thumbnail center-block" *ngIf="activePokemon.sprites.front_default">
+          <img src="http://www.nderf.org/images/page_404.jpg" alt="404" class="img-thumbnail center-block" *ngIf="!activePokemon.sprites.front_default">
+          <div class="center-block"><a class="btn btn-default enc" style="width: 106px; background-image: none; background-color: white;" routerLink="/pokemon/{{activePokemon.id}}/encounters">Encounters</a></div>
         </div>
-        <div class="col-lg-10">
-          <span class="label label-default">Height: {{activePokemon.height}}</span>
-          <span class="label label-default">Weight: {{activePokemon.weight}}</span>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+          <span class="label label-default hidden-xs hidden-sm">Height: {{activePokemon.height}}</span>
+          <span class="label label-default hidden-xs hidden-sm">Weight: {{activePokemon.weight}}</span>
           <br>
-          <h4 class="page-header">Base stats:</h4>
+          <h4 class="page-header main-header">Base stats:</h4>
           <span class="label label-default">Experience: {{activePokemon.base_experience}}</span>
           <span class="label label-primary">{{activePokemon.stats[0].stat.name | capitalize}}: {{activePokemon.stats[0].base_stat}}</span>
           <span class="label label-warning">{{activePokemon.stats[1].stat.name | capitalize}}: {{activePokemon.stats[1].base_stat}}</span>

@@ -6,3 +6,9 @@ a:hover {
   text-decoration: none;
   color: #343d46;
 }
+
+@media(max-width: 920px) {
+  .main-header {
+    margin-top: 0px;
+  }
+}

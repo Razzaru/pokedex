@@ -1,5 +1,5 @@
 <div *ngIf="pokemonList">
-  <div class="form-group" style="margin-bottom: 10px; ">
+  <div class="form-group">
     <input type="text" class="form-control" placeholder="Enter pokemon name..." [(ngModel)]="pokemonId"
            (change)="updateId()" aria-describedby="basic-addon2">
   </div>
@@ -11,7 +11,7 @@
   <button type="button" class="btn btn-default" style="width: 49%; background-image: none;" (click)="prevPageNav()">
     Previous page
   </button>
-  <button type="button" class="btn btn-default" style="width: 50%; background-image: none;" (click)="nextPageNav()">Next
+  <button type="button" class="btn btn-default" style="width: 49%; background-image: none;" (click)="nextPageNav()">Next
     Page
   </button>
 </div>

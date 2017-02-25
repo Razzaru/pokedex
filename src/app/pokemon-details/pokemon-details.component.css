@@ -99,3 +99,15 @@ a:hover {
   color: hotpink;
 }
 
+.enc {
+  margin: 0px auto;
+  margin-top: 5px;
+  display: block;
+}
+
+@media(max-width: 920px) {
+  .main-header {
+    margin-top: 0px;
+  }
+}
+

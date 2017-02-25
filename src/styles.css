@@ -70,3 +70,13 @@
 .fairy {
   color: hotpink;
 }
+
+.col-lg-9 {
+  margin-top: 20px;
+}
+
+@media(max-width: 920px) {
+  .col-lg-9 {
+    margin-top: 0px;
+  }
+}

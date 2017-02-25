@@ -24,6 +24,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { EncountersComponent } from './encounters/encounters.component';
 import { BerriesListComponent } from './berries-list/berries-list.component';
 import { BerryDetailsComponent } from './berry-details/berry-details.component';
+import { NavCollapseComponent } from './nav-collapse/nav-collapse.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { BerryDetailsComponent } from './berry-details/berry-details.component';
     ItemDetailsComponent,
     EncountersComponent,
     BerriesListComponent,
-    BerryDetailsComponent
+    BerryDetailsComponent,
+    NavCollapseComponent
   ],
   imports: [
     BrowserModule,
