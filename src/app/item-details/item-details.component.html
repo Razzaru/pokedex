@@ -1,0 +1,59 @@
+<div *ngIf="activeItem" style="margin-bottom: 50px">
+  <div class="navigation">
+    <a routerLink="/items/{{(activeItem.id)-1}}" class="btn btn-default"
+       style="width: 49.5%; background-image: none">← Prev</a>
+    <a routerLink="/items/{{(activeItem.id)+1}}" class="btn btn-default pull-right"
+       style="width: 49.5%; background-image: none">Next →</a>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span class="panel-title">#{{activeItem.id}} {{activeItem.name | capitalize}}</span>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-2">
+          <img src="{{activeItem.sprites.default}}" alt="{{activeItem.name}}" class="img-thumbnail"
+               *ngIf="activeItem.sprites.default" style="width: 106px; height: 106px">
+          <img src="http://www.nderf.org/images/page_404.jpg" alt="404" class="img-thumbnail"
+               *ngIf="!activeItem.sprites.default">
+        </div>
+        <div class="col-lg-10">
+          <div class="alert alert-success" *ngFor="let effect of activeItem.effect_entries"><strong>Effect: </strong>
+            {{effect.effect}} (<i>{{effect?.short_effect}}</i>)
+          </div>
+          <div class="stats">
+            <span class="label label-warning">Category: {{activeItem.category.name}}</span>
+            <span class="label label-success">Cost: {{activeItem.cost}}</span>
+            <span class="label label-info"
+                  *ngIf="activeItem.fling_effect">Fling effect: {{activeItem.fling_effect.name}}</span>
+            <span class="label label-primary"
+                  *ngIf="activeItem.fling_power">Fling power: {{activeItem.fling_power}}</span>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="heldby" *ngIf="activeItem.held_by_pokemon.length > 0">
+            <h4 class="page-header">Held by:</h4>
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let poke of activeItem.held_by_pokemon"><a routerLink="/pokemon/{{poke.pokemon.name}}">{{poke.pokemon.name | capitalize}}</a></li>
+            </ul>
+          </div>
+          <h4 class="page-header">Attributes:</h4>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let attr of activeItem.attributes">{{attr.name | capitalize}}</li>
+          </ul>
+          <h4 class="page-header">Flavor text entries: </h4>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let text of activeItem.flavor_text_entries"
+                style="border: 1px solid grey">
+              <p><span>{{text.text}}</span></p>
+              <ul class="list-group">
+                <li class="list-group-item"><b>Language: </b>{{text.language.name}}</li>
+                <li class="list-group-item"><b>Version: </b>{{text.version_group.name | capitalize}}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

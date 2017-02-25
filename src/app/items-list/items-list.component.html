@@ -1,0 +1,17 @@
+<div *ngIf="items">
+  <div class="form-group" style="margin-bottom: 10px; ">
+    <input type="text" class="form-control" placeholder="Enter ability name..." [(ngModel)]="itemId"
+           (change)="updateId()" aria-describedby="basic-addon2">
+  </div>
+
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of updateId()"><a routerLink="/items/{{item.name}}">{{item.name
+      | capitalize}}</a></li>
+  </ul>
+  <button type="button" class="btn btn-default" style="width: 49%; background-image: none;" (click)="prevPageNav()">
+    Previous page
+  </button>
+  <button type="button" class="btn btn-default" style="width: 50%; background-image: none;" (click)="nextPageNav()">Next
+    Page
+  </button>
+</div>
